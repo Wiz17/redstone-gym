@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  font-family: 'Lato', sans-serif;
+    
+  }
+  body{
+    background-color: #f1f1f1;
+  }
+  .loading-div{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    overflow: hidden;
+  }
+  
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 99;
+    /* box-shadow: 1px 1px 10px 1px; */
+  }
+  .nav-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+  }
+  .nav-contents-list {
+    display: none;
+  }
+  .nav-content-list-1 {
+    padding-left: 35px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color:white;
+
+    cursor: pointer;
+  }
+  .nav-content-list-1:hover{
+
+    color:rgb(160, 38, 38);
+  }
+  .logo {
+    padding: 15px;
+    /* font-size: 30px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    margin-left: 20px; */
+    cursor: pointer;
+
+  }
+  
+  .nav-contents {
+    margin-right: 20px;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .burger-icon {
+    padding: 30px;
+    font-size: 25px;
+    color: white;
+  }
+
+  .header{
+    height: 100vh;
+    
+
+  }
+  .cover-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* bottom:-10; */
+    z-index: -1;
+  }
+  .header-text{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    background-color: rgb(32 18 18 / 50%);
+
+    display: flex;
+    align-items: center;
+  }
+  .facilities{
+    height:100%;
+  }
+  .header-text-op-0{
+    opacity: 0;
+  }
+  .header-text-op-1{
+    transition: opacity 1s ease;
+
+    opacity: 1;
+  }
+
+  
+  
+  @media all and (min-width: 1022px) and (max-width: 2000px) {
+
+
+  .nav-contents-list {
+    list-style-type: none;
+    display: flex;
+  }
+  .burger{
+    display: none;
+  }
+
+}
+
+
+figure {
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+}
+figure > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+figure figcaption {
+  display: grid;
+  align-items: end;
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: white;
+  padding: .75rem;
+  background: var(--c,#0009);
+  clip-path: inset(0 var(--_i,100%) 0 0);
+  /* -webkit-mask:
+    linear-gradient(#000 0 0),
+    linear-gradient(#000 0 0); */
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+  margin: -1px;
+}
+figure:hover figcaption{
+  --_i: 0%;
+}
+figure:hover img {
+  transform: scale(1.2);
+}
+@supports not (-webkit-mask-clip: text) {
+  figure figcaption {
+   -webkit-mask: none;
+   color: #fff;
+  }
+}
+.facilities-cards{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.routines{
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://c4.wallpaperflare.com/wallpaper/426/618/365/dark-dumbbell-fitness-muscle-training-wallpaper-preview.jpg');
+  background-size: cover;
+}
+
+/* .pg-gallery {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+.card-body{
+  width: 200px;
+}
+
+.fb-card {
+  padding: 20px;
+  margin: 8px;
+  background-color: white;
+}
+
+.text-publisher {
+  margin-top: 20px;
+}
+
+.fb-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.fb{
+  padding: 10px;
+  background-color: black;
+  height: 110%;
+ 
+}
+.footer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://www.bodybuilding.com/fun/images/2015/spotlighted-gym-barbell-brigade-1.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+
+
+}
+.footer-text{
+  color:white;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.footer-end{
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+ 
+}
+.opa{
+  font-size:80px ;
+}
+.header-text-1{
+  margin-left: 50px;
+}
+.facilities-h1{
+  font-size: 50px;
+}
+.gallery-h1{
+  font-size: 50px;
+}
+.footer-img{
+  width: 300px;
+}
+.routines-head-text{
+  font-size: 50px;
+
+}
+
+@media all and (min-width: 150px) and (max-width: 700px) {
+
+  .opa{
+    font-size: 50px;
+  }
+  .header{
+    height: 80vh;
+  }
+  .header-text-1{
+    margin-left: 20px;
+  }
+  .facilities-h1{
+    font-size: 35px;
+  }
+  .gallery-h1{
+    font-size: 35px;
+  }
+  .footer-text{
+    font-size: 15px;
+  }
+  .footer-img{
+    width: 200px;
+  }
+  .routines-1-1{
+    display: none;
+  }
+  .routines-head-text{
+    font-size: 35px;
+
+  }
+  .font-adj{
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 2000px) {
+  .routines{
+    display: flex;
+  }
+  .load{
+    width: 50%;
+  }
+  .font-adj{
+    font-size: 20px;
+  }
+}
+
+/* /////////////css for loading///////////////// */
+.opposites {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  
+}
+.opposites {
+  animation: opposites 2.5s ease-out 0s infinite;  
+}
+.tl, .tr, .br, .bl {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.tl, .tr {
+  top: 0; 
+}
+.tr, .br {
+  left: 30px; 
+}
+.tl, .br {
+  animation: tlbr 2.5s ease-out 0s infinite;
+}
+.br, .bl {
+  top: 30px; 
+}
+.tl, .bl {
+  left: 0; 
+}
+.tr, .bl {
+  animation: trbl 2.5s ease-out 0s infinite;
+}
+.tl {
+  background: red;
+  transform-origin: bottom right;
+}
+.tr {
+  background: green; 
+  transform-origin: bottom left;
+}
+.br {
+  background: dodgerblue; 
+  transform-origin: top left;
+}
+.bl {
+  background: gold; 
+  transform-origin: top right;
+}
+
+@keyframes tlbr {
+  0% {transform: rotate(0);}
+  20% {transform: rotate(90deg);}
+  40% {transform: rotate(90deg);}
+  60% {transform: rotate(0);}
+}
+@keyframes trbl {
+  20% {transform: rotate(0);}
+  40% {transform: rotate(90deg);}
+  60% {transform: rotate(90deg);}
+  80% {transform: rotate(0);}
+}
+@keyframes opposites {
+  80% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
