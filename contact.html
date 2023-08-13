@@ -98,6 +98,8 @@
       fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => alert("Thanks"))
       .catch((error) => console.error("error"));
+      form.reset();
+
     });
   </script>
 </html>
