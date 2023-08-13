@@ -31,33 +31,73 @@
               <div class="app-contact">CONTACT INFO : +000-000-0000</div>
             </div>
             <div class="screen-body-item">
-              <div class="app-form">
-                <div class="app-form-group">
-                  <input
-                    class="app-form-control"
-                    placeholder="NAME"
-                    value=""
-                  />
+              <form
+                autocomplete="off"
+                method="post"
+                name="google-sheet"
+                id="form1"
+              >
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input
+                      type="text"
+                      name="Name"
+                      class="app-form-control"
+                      placeholder="NAME"
+                      value=""
+                    />
+                  </div>
+                  <div class="app-form-group">
+                    <input
+                      type="text"
+                      name="Email"
+                      class="app-form-control"
+                      placeholder="EMAIL"
+                    />
+                  </div>
+                  <div class="app-form-group">
+                    <input
+                      type="number"
+                      name="Mobile"
+                      class="app-form-control"
+                      placeholder="CONTACT NO"
+                    />
+                  </div>
+                  <div class="app-form-group message">
+                    <input
+                      type="text"
+                      name="Message"
+                      class="app-form-control"
+                      placeholder="MESSAGE"
+                    />
+                  </div>
+                  <div class="app-form-group buttons">
+                    <!-- <button class="app-form-button">CANCEL</button> -->
+                    <button
+                      type="submit"
+                      name="submit"
+                      class="app-form-button"
+                      value="SUBMIT"
+                    >SBUMIT</button>
+                  </div>
                 </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL" />
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="CONTACT NO" />
-                </div>
-                <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE" />
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button">CANCEL</button>
-                  <button class="app-form-button">SEND</button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </body>
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzHpm6EFQXnLTVqn6N9XME-voFVZQgeKbkouwHFI8pvkpABUnscXucaup1reUkY1PCm/exec";
+    const form = document.forms['google-sheet'];
+    form.addEventListener("submit", function (e) {
+      console.log("HIH");
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => alert("Thanks"))
+      .catch((error) => console.error("error"));
+    });
+  </script>
 </html>
