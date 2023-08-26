@@ -221,14 +221,15 @@ figure:hover img {
   background-size: cover;
   background-attachment: fixed;
 } */
-.card-body{
+/* .card-body{
   width: 200px;
-}
+} */
 
 .fb-card {
   padding: 20px;
   margin: 8px;
   background-color: white;
+  width: 350px;
 }
 
 .text-publisher {
