@@ -1,9 +1,11 @@
 var k=true;
+var p=true;
+var height=document.body.scrollHeight;
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".nav");
   var navContent = document.querySelectorAll(".nav-content-list-1");
   var scrollPosition = window.scrollY;
-  console.log(scrollPosition);
+  console.log(document.body.scrollHeight);
   var changeColorPosition = 50; // Scroll position at which to change the color
   console.log(navContent);
   if (scrollPosition > changeColorPosition) {
@@ -18,8 +20,15 @@ window.addEventListener("scroll", function () {
     //   })
   }
   
-  if (scrollPosition >= 620 && k) {
+  if (scrollPosition >= 620 && k &&height<3000) {
     k=false;
+    counterEffect(targetNumber, interval);
+
+    counterEffect2(targetNumber2, interval2);
+    counterEffect3(targetNumber3, interval3);
+  }
+  if (scrollPosition >= 2100 && p  && height>=3000) {
+    p=false;
     counterEffect(targetNumber, interval);
 
     counterEffect2(targetNumber2, interval2);
@@ -86,3 +95,4 @@ function counterEffect3(targetNumber, interval) {
 
 const targetNumber3 = 1000; // Replace with your desired target number
 const interval3 = 5; // 2000 milliseconds = 2 seconds
+
